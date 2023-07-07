@@ -1,0 +1,189 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: var(--main-color);
+    /* transition: all 0.1s; */
+}
+
+:root{
+    --main-color: linear-gradient(225deg,#5372f0 ,#68c6f1);
+    --second-color: #fff;
+}
+
+.dark-theme{
+    --main-color: linear-gradient(225deg,#0f0f0f ,#1b1919);;
+    --second-color: #f1eeee;
+}
+
+.logo{
+    position: absolute;
+    z-index: 6;
+    color: whitesmoke;
+    top: 0;
+    left: 0;
+    padding: 40px;
+    font-size: 19px;
+    font-weight: 500;
+    font-style: italic;
+    letter-spacing: 5px;
+    animation: logomove 2s infinite;
+    filter: drop-shadow(2px 2px 2px #383636);
+}
+
+@keyframes logomove{
+    0%{
+        letter-spacing: 2px;
+    }
+    50%{
+        letter-spacing: 5px;
+    }
+    100%{
+        letter-spacing: 2px;
+    }
+}
+
+
+.wrapper{
+    width: 605px;
+    background: var(--second-color);
+    /* background: #f1eeee; */
+    border-radius: 15px;
+    padding: 30px 30px 25px;
+    /* position: relative; */
+}
+
+.wrapper .imgs{
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 30px;
+    height: 30px;
+    /* background: red; */
+    position: absolute;
+    padding: 30px;
+}
+
+.wrapper .imgs img{
+    width: 100%;
+    animation: 1.5s rot linear infinite;
+}
+
+@keyframes rot{
+    0%{
+        transform: rotate(0deg);
+    }
+    50%{
+        transform: rotate(20deg);
+    }
+    100%{
+        transform: rotate(0deg);
+    }
+}
+
+.wrapper header{
+    font-size: 35px;
+    font-weight: 600;
+    text-align: center;
+}
+
+.wrapper .content{
+    margin: 35px 0;
+}
+
+.wrapper .quote-area{
+    display: flex;
+    justify-content: center;
+}
+
+.quote-area i{
+    font-size: 15px;
+}
+
+.quote-area i:first-child{
+    margin: 3px 10px 0 0;
+}
+
+.quote-area i:last-child{
+    display: flex;
+    align-items: flex-end;
+    margin: 0 0 3px 10px;
+}
+
+.quote-area .quote{
+    font-size: 22px;
+    text-align: center;
+    word-break: break-all;
+}
+
+.content .author{
+    display: flex;
+    margin-top: 20px;
+    font-size: 18px;
+    font-style: italic;
+    justify-content: flex-end;
+}
+
+.author span:first-child{
+    margin: -7px 5px 0 0;
+    font-family: monospace;
+}
+
+.wrapper .buttons{
+    border-top: 1px solid #ccc;
+}
+
+.buttons .features{
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    justify-content: space-between;
+}
+
+.features ul{
+    display: flex;
+}
+
+.features ul li{
+    list-style: none;
+    margin: 0 5px;
+    height: 47px;
+    width: 47px;
+    display: flex;
+    color: var(--main-color);
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 2px solid var(--main-color);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.features ul li:hover{
+    color: #fff;
+    background: var(--main-color);
+}
+
+.features button{
+    border: none;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+    font-size: 16px;
+    padding: 13px 22px;
+    border-radius: 30px;
+    background: var(--main-color);
+}
+
+button.loading{
+    opacity: 0.8;
+    pointer-events: none;
+}
+
