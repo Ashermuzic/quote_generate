@@ -2,4 +2,4 @@
 
 project with API
 
-feel free to do what ever :)
+feel free to do whatever :)
